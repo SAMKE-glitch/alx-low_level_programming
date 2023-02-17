@@ -18,7 +18,7 @@ int main(void)
 
 	if (last digit > 5)
 	{
-		printf("Lat digit of %d is %d and is greator than 5\n, n, last digit);
+		printf("Lsat digit of %d is %d and is greator than 5\n, n, last digit);
 	} else if (last digit < 6 && last digit !=0)
 	{
 		printf("Last digit of %d and is less than 6 and not 0\n",
