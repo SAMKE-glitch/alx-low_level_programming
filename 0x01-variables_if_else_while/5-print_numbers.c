@@ -6,7 +6,7 @@
  * Return: 0 Always Success
  */
 
-int main (void)
+int main(void)
 {
 
 	int n;
