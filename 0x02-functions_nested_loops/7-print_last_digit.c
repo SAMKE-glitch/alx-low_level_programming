@@ -5,8 +5,9 @@
  *
  * @i: function parameter
  *
- * Return: Always j
+ * Return: j
  */
+
 int print_last_digit(int i)
 {
 	int j;
@@ -14,5 +15,6 @@ int print_last_digit(int i)
 	j = i % 10;
 	if (i < 0)
 		j = -j;
+	_putchar(j + '0');
 	return (j);
 }
