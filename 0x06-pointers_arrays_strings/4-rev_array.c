@@ -2,7 +2,8 @@
 
 /**
  * reverse_array - function that reverses an array
- * @a array to be reversed
+ *
+ * @a: array to be reversed
  * @n: number of elements of the array
  * Return: 0
  */
