@@ -7,7 +7,6 @@
  */
 char *cap_string(char *z)
 {
-	z = "samwel, is; in alx africa"
 	char spc[] = {32, 9, '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
 	int len = 13;
 	int a = 0, i;
