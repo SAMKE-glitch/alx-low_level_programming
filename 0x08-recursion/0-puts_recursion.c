@@ -3,7 +3,7 @@
  * _puts_recursion - function that prints a string followed by a new line
  * @s: string
  *
- *Return: no return
+ * Return: no return
  */
 void _puts_recursion(char *s)
 {
@@ -12,6 +12,6 @@ void _puts_recursion(char *s)
 		_putchar(*s);
 		_puts_recursion(s + 1);
 	}
-	esle
+	else
 		_putchar('\n');
 }
