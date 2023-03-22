@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 	arg1 = atoi(argv[1]);
 	arg2 = atoi(argv[3]);
 
-	func = get_up_func(argv[2]);
+	func = get_op_func(argv[2]);
 
 	if (!func)
 	{
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 
 	o = *argv[2];
 
-	if ((o == '/' || 0 == '%') && argv2 == 0)
+	if ((o == '/' || 0 == '%') && arg2 == 0)
 	{
 		printf("Error\n");
 		exit(100);

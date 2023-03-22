@@ -5,7 +5,8 @@
  * the operation asked by the user
  * @s: the operator asked by the user
  *
- * Return: pointer to the function that corresponds to the operator given as a parameter
+ * Return: pointer to the function that corresponds to the operator
+ * given as a parameter
  */
 int (*get_op_func(char *s))(int, int)
 {
