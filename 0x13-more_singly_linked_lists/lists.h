@@ -13,7 +13,7 @@
  * Description: singly linked list node structure
  * for Holberton project
  */
-typdef struct listint_s
+typedef struct listint_s
 {
 	int n;
 	struct listint_s *next;
@@ -26,7 +26,7 @@ typdef struct listint_s
  *
  * Description: singly linked list of pointers
  */
-typdef struct listp_s
+typedef struct listp_s
 {
 	void *p;
 	struct listp_s *next;
