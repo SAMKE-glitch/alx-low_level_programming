@@ -34,9 +34,9 @@ void check_elf(unsigned char *e_ident)
 	for (i = 0; i < 4; i++)
 	{
 		if (e_ident[i] != 127 &&
-				e_ident[i] != 'E' &&
-				e_ident[i] != 'L' &&
-				e_ident[i] != 'F')
+			e_ident[i] != 'E' &&
+			e_ident[i] != 'L' &&
+			e_ident[i] != 'F')
 		{
 			dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
 				exit(98);
@@ -273,11 +273,11 @@ void close_elf(int elf)
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	Elf64_Ehdr *header;
-	int s, m;
+	int o, r;
 
-	s = open(argv[1], O_RDONLY);
+	o = open(argv[1], O_RDONLY);
 
-	if (s == -1)
+	if (o == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Cant read file %s\n", argv[1]);
 		exit(98);
@@ -287,20 +287,20 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 
 	if (header == NULL)
 	{
-		close_elf(s);
+		close_elf(o);
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
 		exit(98);
 	}
-	m = read(s, header, sizeof(Elf64_Ehdr));
-	if (m == -1)
+	r = read(o, header, sizeof(Elf64_Ehdr));
+	if (r == -1)
 	{
 		free(header);
-		close_elf(s);
+		close_elf(o);
 		dprintf(STDERR_FILENO, "Error: '%s': No such file\n", argv[1]);
 		exit(98);
 	}
 	check_elf(header->e_ident);
-	printf("ELF Header:.n");
+	printf("ELF Header:\n");
 	print_magic(header->e_ident);
 	print_class(header->e_ident);
 	print_data(header->e_ident);
@@ -311,6 +311,6 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	print_entry(header->e_entry, header->e_ident);
 
 	free(header);
-	close_elf(s);
+	close_elf(o);
 	return (0);
 }
