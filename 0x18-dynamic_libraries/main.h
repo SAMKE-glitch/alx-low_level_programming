@@ -21,6 +21,10 @@ void _puts(char *str);
 unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 int _abs(int a);
-
+int add(int a, int b);
+int sub(int a, int b);
+int mul(int a, int b);
+int my_div(int a, int b);
+int mod(int a, int b);
 
 #endif
