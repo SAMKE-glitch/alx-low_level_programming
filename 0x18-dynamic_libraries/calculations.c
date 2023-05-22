@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
 #include <math.h>
 /**
  * add - function that adds 2 integers
